@@ -4,8 +4,8 @@
   justify-content: center;
 }
 .todos_box {
-  width: 300px;
-  height: 500px;
+  width: 250px;
+  min-height: 400px;
   margin: 25px;
   box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -16,15 +16,21 @@
   background: #ffffff;
   justify-content: center;
 }
+form{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
 .activeTodosInput {
-  width: 260px;
+  width: 100%;
   height: 10px;
   margin-top: 20px;
+  outline: none;
   background: #ffffff;
   box-shadow: inset 1px 2px 5px 1px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   border: none;
-  padding: 20px;
+  padding: 15px;
   font-weight: 300;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
@@ -48,19 +54,19 @@
   font-size: 18px;
   margin-top: 30px;
   color: rgba(0, 0, 0, 0.41);
-  height: 40px;
+  height: 30px;
 }
 
 /* Common */
 .todos{
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .todo {
-  width: 260px;
+  width: 210px;
   height: 10px;
-  margin-top: 25px;
-  padding: 20px;
-  box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 15px;
+  padding: 15px;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -71,4 +77,8 @@
   width: 100%;
 }
 .closeButton{
+  margin-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+
 }
