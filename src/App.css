@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.frame {
+  margin: 50px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.todos_box {
+  width: 300px;
+  height: 500px;
+  margin: 25px;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 20px;
+}
+/* active todos section */
+.activeTodos {
+  background: #ffffff;
+  justify-content: center;
+}
+.activeTodosInput {
+  width: 260px;
+  height: 10px;
+  margin-top: 20px;
+  background: #ffffff;
+  box-shadow: inset 1px 2px 5px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-weight: 300;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+/* completed todos section */
+.completedTodos {
+  background: #ffffef;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* removed todos section */
+.removedTodos {
+  background: #efffff;
+}
+
+.title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.41);
+  height: 40px;
+}
+
+/* Common */
+.todos{
+  margin-top: 50px;
+}
+.todo {
+  width: 260px;
+  height: 10px;
+  margin-top: 25px;
+  padding: 20px;
+  box-shadow: 1px 2px 7px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoText{
+  margin: 0px 10px;
+  width: 100%;
+}
+.closeButton{
 }

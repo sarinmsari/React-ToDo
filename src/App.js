@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="frame">
+      <div className="activeTodos todos_box">
+        <input
+          type="text"
+          className="activeTodosInput"
+          placeholder="Todos here..."
+        />
+        <div className="todos">
+          <div className="todo">
+            <input type="checkbox" name="checkbox" id="" />
+            <i className="todoText">blah balh</i>
+            <b className="closeButton">x</b>
+          </div>
+        </div>
+      </div>
+      <div className="completedTodos todos_box">
+        <p className="title">Completed</p>
+        <div className="todos"></div>
+        <div className="todo">
+          <i className="todoText">blah balh</i>
+          <b className="closeButton">x</b>
+        </div>
+      </div>
+      <div className="removedTodos todos_box">
+        <p className="title">Removed</p>
+        <div className="todos"></div>
+        <div className="todo">
+          <i className="todoText">blah balh</i>
+          <b className="closeButton">x</b>
+        </div>
+      </div>
     </div>
   );
 }
