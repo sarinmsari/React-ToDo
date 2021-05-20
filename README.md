@@ -1,6 +1,6 @@
 ![design image](./credentials/ToDo.png)
 
-#How to Use:
+##How to Use:
 1. Enter todo in the input bar available in top of the 'first box'.
 2. On completion of the task click checkbox and the task moves to 'completed box'.
 3. If checked by mistake uncheck from completed task and task returns to 'first box'.
