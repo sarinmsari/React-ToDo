@@ -14,76 +14,138 @@ function App() {
         { id: Date.now(), text: todo, status: false },
       ]);
     }
-    console.log(activetodo);
     setTodo("");
   };
 
+  const handleRemove = (data) => {
+    setRemovedtodo([...removedtodo, data]);
+    var items = activetodo.filter((item) => {
+      return item !== data;
+    });
+    setActivetodo(items);
+  };
+
   return (
-    <div className="frame">
-      <div className="activeTodos todos_box">
-        <form onSubmit={handleInputSubmit}>
-          <input
-            type="text"
-            className="activeTodosInput"
-            placeholder="Todos here..."
-            onChange={(e) => setTodo(e.target.value)}
-            value={todo}
-          />
-        </form>
-        <div className="todos">
-          {activetodo.map((data, key) => {
-            return (
-              <div key={key} className="todo">
-                <input
-                  type="checkbox"
-                  name="checkbox"
-                  id=""
-                  value={data.status}
-                  onChange={(e) => {
-                    setActivetodo(
-                      activetodo.filter((obj) => {
-                        if (obj.id === data.id) {
-                          obj.status = e.target.checked;
-                        }
-                        return obj;
-                      })
-                    );
-                    console.log(data);
-                  }}
-                />
-                <span className="todoText">{data.text}</span>
-                <span className="closeButton">x</span>
-              </div>
-            );
-          })}
+    <>
+      <div className="frame">
+        <div className="activeTodos todos_box">
+          <form onSubmit={handleInputSubmit}>
+            <input
+              type="text"
+              className="activeTodosInput"
+              placeholder="Todos here..."
+              onChange={(e) => setTodo(e.target.value)}
+              value={todo}
+            />
+          </form>
+          <div className="todos">
+            {activetodo.map((data, key) => {
+              if (!data.status) {
+                return (
+                  <div key={key} className="todo">
+                    <input
+                      type="checkbox"
+                      name="checkbox"
+                      className="checkbox"
+                      checked={data.status}
+                      onChange={(e) => {
+                        setActivetodo(
+                          activetodo.filter((obj) => {
+                            if (obj.id === data.id) {
+                              obj.status = e.target.checked;
+                            }
+                            return obj;
+                          })
+                        );
+                      }}
+                    />
+                    <span className="todoText">{data.text}</span>
+                    <span
+                      onClick={() => {
+                        handleRemove(data);
+                      }}
+                      className="closeButton"
+                    >
+                      x
+                    </span>
+                  </div>
+                );
+              }
+            })}
+          </div>
         </div>
-      </div>
-      <div className="completedTodos todos_box">
-        <p className="title">Completed</p>
-        <div className="todos">
-          {activetodo.map((data, key) => {
-            if (data.status) {
+        <div className="completedTodos todos_box">
+          <p className="title">Completed</p>
+          <div className="todos">
+            {activetodo.map((data, key) => {
+              if (data.status) {
+                return (
+                  <div key={key} className="todo">
+                    <input
+                      type="checkbox"
+                      name="checkbox"
+                      className="checkbox"
+                      checked={data.status}
+                      onChange={(e) => {
+                        setActivetodo(
+                          activetodo.filter((obj) => {
+                            if (obj.id === data.id) {
+                              obj.status = e.target.checked;
+                            }
+                            return obj;
+                          })
+                        );
+                      }}
+                    />
+                    <span className="todoText">{data.text}</span>
+                    <span
+                      onClick={() => {
+                        handleRemove(data);
+                      }}
+                      className="closeButton"
+                    >
+                      x
+                    </span>
+                  </div>
+                );
+              }
+              return null;
+            })}
+          </div>
+        </div>
+        <div className="removedTodos todos_box">
+          <p className="title">Removed</p>
+          <div className="todos">
+            {removedtodo.map((data, key) => {
               return (
-                <div key={key} className="todo">
+                <div className="todo">
                   <span className="todoText">{data.text}</span>
-                  <span className="closeButton">x</span>
+                  <span
+                    onClick={() => {
+                      var items = removedtodo.filter((item) => {
+                        return item != data;
+                      });
+                      setRemovedtodo(items);
+                    }}
+                    className="closeButton delete"
+                  >
+                    Delete
+                  </span>
                 </div>
               );
-            }
-            return null;
-          })}
-        </div>
-      </div>
-      <div className="removedTodos todos_box">
-        <p className="title">Removed</p>
-        <div className="todos">
-          <div className="todo">
-            <span className="todoText">blah balh</span>
-            <span className="closeButton">x</span>
+            })}
           </div>
         </div>
       </div>
-    </div>
+      <div className="developer-info-section">
+        <p>
+          code with &#10084; by{" "}
+          <a href="http://sarinm.me" target="_blank">
+            Sarin M
+          </a>
+        </p>
+      </div>
+    </>
   );
 }
 
