@@ -1,10 +1,25 @@
 import "./App.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
   const [todo, setTodo] = useState("");
-  const [activetodo, setActivetodo] = useState([]);
-  const [removedtodo, setRemovedtodo] = useState([]);
+  const [activetodo, setActivetodo] = useState(
+    localStorage.getItem("activetodo")
+      ? JSON.parse(localStorage.getItem("activetodo"))
+      : []
+  );
+  const [removedtodo, setRemovedtodo] = useState(
+    localStorage.getItem("removedtodo")
+      ? JSON.parse(localStorage.getItem("removedtodo"))
+      : []
+  );
+
+  useEffect(() => {
+    localStorage.setItem("activetodo", JSON.stringify(activetodo));
+    localStorage.setItem("removedtodo", JSON.stringify(removedtodo));
+
+    console.log("useeffect");
+  }, [activetodo, removedtodo]);
 
   const handleInputSubmit = (e) => {
     e.preventDefault();
@@ -123,7 +138,7 @@ function App() {
                   <span
                     onClick={() => {
                       var items = removedtodo.filter((item) => {
-                        return item != data;
+                        return item !== data;
                       });
                       setRemovedtodo(items);
                     }}
