@@ -42,6 +42,7 @@ form {
 }
 .checkbox {
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.7);
 }
 
 /* removed todos section */
@@ -85,10 +86,14 @@ form {
 }
 .closeButton {
   padding-left: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-style: normal;
-  border-left: 1px solid black;
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.6);
 }
 .delete {
   color: red;
