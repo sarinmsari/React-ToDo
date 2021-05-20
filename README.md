@@ -1,4 +1,4 @@
-![design image](./credentials/ToDo.png)
+![design image](./credentials/output.jpg)
 
 ## How to Use:
 
