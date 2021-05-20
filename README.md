@@ -2,7 +2,7 @@
 
 #### Try the app:
 
-[App Link](https://60a6534c76dabf30e79710a4--eager-roentgen-23c027.netlify.app/){:target="\_blank" rel="noopener"}
+[App Link](https://60a6534c76dabf30e79710a4--eager-roentgen-23c027.netlify.app/) `better open in new tab mannually`
 
 ## How to Use:
 
