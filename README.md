@@ -2,7 +2,7 @@
 
 
 #### Try the app: 
-[App Link](https://60a6534c76dabf30e79710a4--eager-roentgen-23c027.netlify.app/)
+[App Link](https://60a6534c76dabf30e79710a4--eager-roentgen-23c027.netlify.app/){:target="_blank"}
 ## How to Use:
 
 1. Enter todo in the input bar available in top of the 'first box' and click `Enter` button on keyboard.
