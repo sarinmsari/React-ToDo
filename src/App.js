@@ -17,8 +17,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("activetodo", JSON.stringify(activetodo));
     localStorage.setItem("removedtodo", JSON.stringify(removedtodo));
-
-    console.log("useeffect");
   }, [activetodo, removedtodo]);
 
   const handleInputSubmit = (e) => {

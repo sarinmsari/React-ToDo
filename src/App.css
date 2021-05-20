@@ -86,7 +86,7 @@ form {
 }
 .closeButton {
   padding-left: 10px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-style: normal;
   border-left: 1px solid rgba(0, 0, 0, 0.3);
   cursor: pointer;
@@ -115,4 +115,34 @@ form {
 .developer-info-section p a {
   color: rgba(251, 0, 0, 0.6);
   text-decoration: none;
+}
+
+/* Responsiveness */
+@media (max-width: 415px) {
+  
+  .frame {
+    display: block;
+    margin: 20px;
+  }
+  .todos_box {
+    width: 100%;
+    min-height: 0px;
+    margin: 0px;
+    box-shadow: none;
+    border-radius: 0px;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .todo {
+    width: 90%;
+    min-height: 10px;
+    margin-top: 15px;
+    padding: 15px;
+  }
+  .title {
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.41);
+    height: 30px;
+  }
 }
