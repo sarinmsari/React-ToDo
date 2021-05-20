@@ -118,10 +118,10 @@ form {
 }
 
 /* Responsiveness */
-@media (max-width: 415px) {
-  
+@media (max-width: 880px) {
   .frame {
-    display: block;
+    flex-direction: column;
+    align-items: center;
     margin: 20px;
   }
   .todos_box {
@@ -135,14 +135,23 @@ form {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
   .todo {
-    width: 90%;
-    min-height: 10px;
+    width: 100%;
+    min-height: 40px;
     margin-top: 15px;
-    padding: 15px;
+    padding: 0px;
   }
   .title {
     margin-top: 10px;
     color: rgba(0, 0, 0, 0.41);
-    height: 30px;
+    height: 10px;
+  }
+  .checkbox {
+    margin-left: 20px;
+  }
+  .closeButton {
+    margin-right: 20px;
+  }
+  .todoText {
+    margin-left: 20px;
   }
 }
