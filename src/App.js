@@ -75,7 +75,8 @@ function App() {
                     <span className="todoText">{data.text}</span>
                     <span
                       onClick={() => {
-                        handleRemove(data);
+                        window.confirm("removed items can't be restored") &&
+                          handleRemove(data);
                       }}
                       className="closeButton"
                     >
@@ -113,11 +114,19 @@ function App() {
                     <span className="todoText">{data.text}</span>
                     <span
                       onClick={() => {
-                        handleRemove(data);
+                        let isdelete = window.confirm(
+                          "deleted items can't be restored"
+                        );
+                        if (isdelete) {
+                          var items = activetodo.filter((item) => {
+                            return item !== data;
+                          });
+                          setActivetodo(items);
+                        }
                       }}
-                      className="closeButton"
+                      className="closeButton delete"
                     >
-                      x
+                      Delete
                     </span>
                   </div>
                 );
@@ -135,10 +144,15 @@ function App() {
                   <span className="todoText">{data.text}</span>
                   <span
                     onClick={() => {
-                      var items = removedtodo.filter((item) => {
-                        return item !== data;
-                      });
-                      setRemovedtodo(items);
+                      let isdelete = window.confirm(
+                        "deleted items can't be restored"
+                      );
+                      if (isdelete) {
+                        var items = removedtodo.filter((item) => {
+                          return item !== data;
+                        });
+                        setRemovedtodo(items);
+                      }
                     }}
                     className="closeButton delete"
                   >
